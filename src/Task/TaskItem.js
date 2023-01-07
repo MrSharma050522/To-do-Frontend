@@ -38,8 +38,8 @@ export default function TaskItem(props) {
         updateTaskHandler(event, text);
       }
       taskEditRef.current.value = "";
-      setEdit(!edit);
     }
+    setEdit(!edit);
   };
 
   const taskDoneHandler = (event) => {
