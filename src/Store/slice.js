@@ -24,5 +24,5 @@ const store = createSlice({
   },
 });
 
-export const { saveToken, setName, setEmail } = store.actions;
+export const { saveToken, setName, setEmail, setTaskArray } = store.actions;
 export default store.reducer;

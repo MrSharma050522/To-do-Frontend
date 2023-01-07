@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useSelector } from "react-redux";
-import { backendURL } from "./App";
+import { backendURL } from "../App";
+import classes from "../User/Form.module.css";
 
 export default function NewTask() {
   const taskRef = useRef();
@@ -21,20 +22,22 @@ export default function NewTask() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        window.location.reload();
+        // window.location.reload();
       })
       .catch((err) => alert(err.message));
+    taskRef.current.value = "";
   };
 
   return (
-    <div>
+    <div className={classes.div}>
       <form onSubmit={addTaskHandler}>
         <h1>Create New Task</h1>
         <p>Enter Task</p>
         <input type="text" required ref={taskRef} />
         <br />
-        <button type="submit">Add Task</button>
+        <button className={classes.button} type="submit">
+          Add Task
+        </button>
       </form>
     </div>
   );

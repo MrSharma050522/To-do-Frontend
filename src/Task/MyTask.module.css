@@ -1,0 +1,63 @@
+.item {
+  width: 100%;
+  background-color: #acbeeb3d;
+  border: 1px solid skyblue;
+  box-shadow: 0px 0px 10px rgb(7, 48, 233);
+}
+
+.div {
+  width: 50%;
+  box-sizing: border-box;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.button {
+  width: 15%;
+  height: auto;
+  background-color: #0092ca;
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: green;
+  box-shadow: 0px 0px 10px red;
+}
+
+.btnDelete {
+  width: 15%;
+  height: auto;
+  background-color: #0092ca;
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnDelete:hover {
+  background-color: red;
+  box-shadow: 0px 0px 10px rgb(23, 8, 240);
+}
+
+.edit {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.buttonHolder {
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { backendURL } from "./App";
-import { saveToken, setEmail, setName } from "./slice";
+import { backendURL } from "../App";
+import { saveToken, setEmail, setName } from "../Store/slice";
+import classes from "./Form.module.css";
 
 export default function Register() {
   const nameRef = useRef();
@@ -27,7 +28,7 @@ export default function Register() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         dispatch(saveToken(data.token));
         dispatch(setName(data.user.name));
         dispatch(setEmail(data.user.email));
@@ -36,16 +37,21 @@ export default function Register() {
       .catch((err) => alert(err.message));
   };
   return (
-    <form onSubmit={registerHandler}>
-      <h1>Register</h1>
-      <p>Enter User Name</p>
-      <input type="text" ref={nameRef} required />
-      <p>Enter User Email</p>
-      <input type="email" ref={emailRef} required />
-      <p>Enter User Password</p>
-      <input type="password" ref={passwordRef} required />
-      <br />
-      <button type="submit">Register</button>
-    </form>
+    <div className={classes.div}>
+      <form onSubmit={registerHandler}>
+        <h1>Register</h1>
+        <label htmlFor="name">Enter User Name</label>
+        <br />
+        <input type="text" ref={nameRef} required /> <br />
+        <label htmlFor="email">Enter User Email</label> <br />
+        <input type="email" ref={emailRef} required /> <br />
+        <label htmlFor="password">Enter User Password</label> <br />
+        <input type="password" ref={passwordRef} required />
+        <br />
+        <button className={classes.button} type="submit">
+          Register
+        </button>
+      </form>
+    </div>
   );
 }

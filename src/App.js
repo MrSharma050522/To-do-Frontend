@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import LogIn from "./LogIn";
-import MyTask from "./MyTask";
-import Navbar from "./Navbar";
-import NewTask from "./NewTask";
-import Register from "./Register";
+import LogIn from "./User/LogIn";
+import MyTask from "./Task/MyTask";
+import Navbar from "./Layout/Navbar";
+import NewTask from "./Task/NewTask";
+import Register from "./User/Register";
 
 export const backendURL = "https://to-do-node-sandy.onrender.com";
 
