@@ -5,15 +5,13 @@ import { backendURL } from "../App";
 import classes from "./MyTask.module.css";
 import TaskItem from "./TaskItem";
 
-let getAllTask;
-
 export default function MyTask() {
   const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
 
   const token = useSelector((state) => state.token);
 
-  getAllTask = () => {
+  const getAllTask = () => {
     if (!token) {
       navigate("/login");
     }
