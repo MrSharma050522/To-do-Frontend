@@ -23,13 +23,14 @@ export default function MyTask() {
       .then((res) => res.json())
       .then((data) => {
         setTasks(data.tasks);
+        window.location.reload();
       });
   };
 
   useEffect(() => {
     console.log("here");
     getAllTask();
-  });
+  }, []);
 
   return (
     <div className={classes.div}>

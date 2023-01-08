@@ -22,7 +22,7 @@ export default function NewTask() {
     })
       .then((res) => res.json())
       .then((data) => {
-        // window.location.reload();
+        window.location.reload();
       })
       .catch((err) => alert(err.message));
     taskRef.current.value = "";

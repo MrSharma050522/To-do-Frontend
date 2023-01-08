@@ -24,7 +24,7 @@ export default function TaskItem(props) {
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
-        // window.location.reload();
+        window.location.reload();
       });
   };
 
@@ -57,7 +57,7 @@ export default function TaskItem(props) {
         .then((res) => res.json())
         .then((data) => {
           // console.log(data);
-          // window.location.reload();
+          window.location.reload();
         });
     }
   };
