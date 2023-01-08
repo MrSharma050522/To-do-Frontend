@@ -27,6 +27,7 @@ export default function MyTask() {
   };
 
   useEffect(() => {
+    console.log("here");
     getAllTask();
   });
 
