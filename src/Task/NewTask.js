@@ -1,14 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { backendURL } from "../App";
 import classes from "../User/Form.module.css";
 
 export default function NewTask() {
   const taskRef = useRef();
+  const [loading, setLoading] = useState(false);
+
   const token = useSelector((state) => state.token);
 
   const addTaskHandler = (event) => {
     event.preventDefault();
+    setLoading(true);
     const text = taskRef.current.value;
     fetch(`${backendURL}/task/addtask`, {
       method: "POST",
@@ -23,6 +27,7 @@ export default function NewTask() {
       .then((res) => res.json())
       .then((data) => {
         window.location.reload();
+        setLoading(false);
       })
       .catch((err) => alert(err.message));
     taskRef.current.value = "";
@@ -30,6 +35,7 @@ export default function NewTask() {
 
   return (
     <div className={classes.div}>
+      {loading && <Spinner variant="success" />}
       <form onSubmit={addTaskHandler}>
         <h1>Create New Task</h1>
         <p>Enter Task</p>

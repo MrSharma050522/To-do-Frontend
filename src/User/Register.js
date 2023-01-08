@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { backendURL } from "../App";
@@ -9,6 +10,7 @@ export default function Register() {
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
+  const [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,7 +20,7 @@ export default function Register() {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-
+    setLoading(true);
     fetch(`${backendURL}/user/register`, {
       method: "POST",
       headers: {
@@ -33,11 +35,13 @@ export default function Register() {
         dispatch(setName(data.user.name));
         dispatch(setEmail(data.user.email));
         navigate("/mytask");
+        setLoading(false);
       })
       .catch((err) => alert(err.message));
   };
   return (
     <div className={classes.div}>
+      {loading && <Spinner variant="primary" />}
       <form onSubmit={registerHandler}>
         <h1>Register</h1>
         <label htmlFor="name">Enter User Name</label>
