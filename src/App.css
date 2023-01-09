@@ -1,6 +1,21 @@
 body {
   /* background-: #9cd3d3; */
   background: #b6e1e0;
+  background-image: linear-gradient(
+    to right top,
+    #38e127,
+    #00e26e,
+    #00e09d,
+    #00dcc0,
+    #00d6d4,
+    #2dd7d1,
+    #42d7ce,
+    #51d8cb,
+    #73dfb6,
+    #9ae39f,
+    #c3e58c,
+    #ece382
+  );
 }
 
 .App {

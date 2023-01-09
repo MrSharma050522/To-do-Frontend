@@ -65,7 +65,13 @@ export default function TaskItem(props) {
   return (
     <div
       className={`alert ${classes.item}`}
-      style={{ backgroundColor: `${el.completed ? "#41d8bf" : ""}` }}
+      style={{
+        backgroundImage: `${
+          el.completed
+            ? "radial-gradient(circle, #1dec09, #00e39d, #00d0f3, #00b5ff, #0091ff, #0091ff, #0092ff, #0092ff, #00b7ff, #00d3f1, #00e69b, #50f00a)"
+            : ""
+        }`,
+      }}
     >
       <h3 style={{ textDecoration: `${el.completed ? "line-through" : ""}` }}>
         {el.text}

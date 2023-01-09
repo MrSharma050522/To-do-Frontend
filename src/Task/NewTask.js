@@ -35,7 +35,7 @@ export default function NewTask() {
 
   return (
     <div className={classes.div}>
-      {loading && <Spinner variant="success" />}
+      {loading && <Spinner variant="info" />}
       <form onSubmit={addTaskHandler}>
         <h1>Create New Task</h1>
         <p>Enter Task</p>

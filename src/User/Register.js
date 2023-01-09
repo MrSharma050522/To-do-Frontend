@@ -41,7 +41,7 @@ export default function Register() {
   };
   return (
     <div className={classes.div}>
-      {loading && <Spinner variant="primary" />}
+      {loading && <Spinner variant="light" />}
       <form onSubmit={registerHandler}>
         <h1>Register</h1>
         <label htmlFor="name">Enter User Name</label>

@@ -39,7 +39,7 @@ export default function LogIn() {
   };
   return (
     <div className={classes.div}>
-      {loading && <Spinner variant="info" />}
+      {loading && <Spinner variant="light" />}
       <form onSubmit={logInHandler}>
         <h1>Login</h1>
         <label htmlFor="email">Enter User Email</label>
