@@ -44,6 +44,10 @@ export default function TaskItem(props) {
 
   const taskDoneHandler = (event) => {
     event.preventDefault();
+    // props.setDone(true);
+    // setTimeout(() => {
+    //   props.setDone(false);
+    // }, 5000);
     if (!el.completed) {
       updateTaskHandler(event, el.text, true);
     } else {
