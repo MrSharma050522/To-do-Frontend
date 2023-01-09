@@ -65,6 +65,11 @@ export default function TaskItem(props) {
     }
   };
 
+  const closeHandler = (event) => {
+    event.preventDefault();
+    setEdit(false);
+  };
+
   return (
     <Fragment>
       {showTask && (
@@ -100,6 +105,15 @@ export default function TaskItem(props) {
             >
               {edit && !done ? "Save" : "Edit"}
             </button>
+            {edit && !done && (
+              <button
+                className={classes.button}
+                id={el._id}
+                onClick={closeHandler}
+              >
+                Cancel
+              </button>
+            )}
             <button
               onClick={taskDoneHandler}
               id={el._id}
