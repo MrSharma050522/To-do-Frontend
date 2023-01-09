@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { backendURL } from "../App";
 import classes from "./MyTask.module.css";
+import NewTask from "./NewTask";
 import TaskItem from "./TaskItem";
 
 export default function MyTask() {
@@ -27,15 +28,17 @@ export default function MyTask() {
   };
 
   useEffect(() => {
-    console.log("here");
     getAllTask();
   }, []);
 
   return (
-    <div className={classes.div}>
-      {tasks.map((el) => (
-        <TaskItem key={el._id} el={el} />
-      ))}
-    </div>
+    <Fragment>
+      <NewTask setTasks={setTasks} />
+      <div className={classes.div}>
+        {tasks.map((el) => (
+          <TaskItem key={el._id} el={el} />
+        ))}
+      </div>
+    </Fragment>
   );
 }

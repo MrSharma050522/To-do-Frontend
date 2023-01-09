@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { backendURL } from "../App";
 import classes from "../User/Form.module.css";
 
-export default function NewTask() {
+export default function NewTask(props) {
   const taskRef = useRef();
   const [loading, setLoading] = useState(false);
 
@@ -26,8 +26,8 @@ export default function NewTask() {
     })
       .then((res) => res.json())
       .then((data) => {
-        window.location.reload();
         setLoading(false);
+        props.setTasks((tasks) => [...tasks, data.task]);
       })
       .catch((err) => alert(err.message));
     taskRef.current.value = "";
