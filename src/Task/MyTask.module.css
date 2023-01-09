@@ -34,7 +34,7 @@
 .button {
   width: fit-content;
   height: auto;
-  background-color: #007cb9;
+  background-color: #455d7a;
 
   color: white;
   padding: 15px 15px 15px 15px;
@@ -52,7 +52,7 @@
 .btnDelete {
   width: fit-content;
   height: auto;
-  background-color: #007cb9;
+  background-color: #455d7a;
   color: white;
   padding: 15px 15px 15px 15px;
 
