@@ -1,7 +1,7 @@
 body {
   /* background-: #9cd3d3; */
   background: #b6e1e0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right top,
     #38e127,
     #00e26e,
@@ -15,7 +15,7 @@ body {
     #9ae39f,
     #c3e58c,
     #ece382
-  );
+  );*/
 }
 
 .App {

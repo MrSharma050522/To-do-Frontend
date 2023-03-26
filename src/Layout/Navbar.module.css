@@ -5,7 +5,7 @@
 }
 .navstyle {
   background-color: #497285;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     #ec1141,
     #ed005d,
@@ -19,7 +19,7 @@
     #00cbf9,
     #00e0a3,
     #11ec24
-  );
+  ); */
   box-shadow: 0px 0px 10px red;
 }
 

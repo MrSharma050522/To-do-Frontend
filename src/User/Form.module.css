@@ -34,7 +34,7 @@ select {
   justify-self: center;
   border-radius: 5px;
   background-color: #83cee0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right top,
     #e12748,
     #e10062,
@@ -48,7 +48,7 @@ select {
     #766ae9,
     #8076ea,
     #8b82ec
-  );
+  ); */
   padding: 20px;
   box-shadow: 0px 0px 20px red;
 }

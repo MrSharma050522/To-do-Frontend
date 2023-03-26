@@ -1,7 +1,7 @@
 .item {
   width: 100%;
   background-color: #acbeeb3d;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left bottom,
     #e12748,
     #e10062,
@@ -15,7 +15,7 @@
     #766ae9,
     #8076ea,
     #8b82ec
-  );
+  ); */
   border: 1px solid skyblue;
   color: #0c005a;
   box-shadow: 0px 0px 10px rgb(7, 48, 233);
